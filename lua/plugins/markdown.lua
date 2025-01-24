@@ -1,12 +1,11 @@
-return{
+return {
 	{
-		"iamcco/markdown-preview.nvim",
-  		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-  		build = "npm install",	
-  		init = function()
-    			vim.g.mkdp_filetypes = { "markdown" }
-  		end,
-  		ft = { "markdown" },
-	}
+		"instant-markdown/vim-instant-markdown",
+		ft = { "markdown" },
+		build = "yarn install",
+		config = function()
+			vim.g.instant_markdown_autostart = 0
+		end,
+	},
 }
 
