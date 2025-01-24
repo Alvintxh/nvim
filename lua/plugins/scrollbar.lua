@@ -19,7 +19,7 @@ return {
 			group = group,
 		})
 		require("scrollbar.handlers.search").setup({})
-		--require("scrollbar.handlers.gitsigns").setup()
+		require("scrollbar.handlers.gitsigns").setup()
 		require("scrollbar").setup({
 			show = true,
 			handle = {
