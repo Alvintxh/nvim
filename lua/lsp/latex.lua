@@ -2,9 +2,6 @@ return{
 	require'lspconfig'.texlab.setup{
 		cmd = { "texlab" },
 		filetypes = { "tex", "bib" },
-		root_dir = function(filename)
-     			return util.path.dirname(filename)
-    		end,
 		settings = {
  		texlab = {
     			auxDirectory = ".",
