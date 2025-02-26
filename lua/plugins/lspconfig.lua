@@ -3,6 +3,7 @@ return {
 
 	config = function()
 		require("lsp.lua")
+		require("lsp.latex")
 	end,
 }
 
