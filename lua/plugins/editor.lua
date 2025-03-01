@@ -100,11 +100,11 @@ return {
 			vim.keymap.set("x", "s", substitute.visual, { noremap = true })
 		end
 	},
-	{
-		"kevinhwang91/nvim-ufo",
-		dependencies = { "kevinhwang91/promise-async", },
-		config = function() require('ufo').setup() end
-	},
+--	{
+--		"kevinhwang91/nvim-ufo",
+--		dependencies = { "kevinhwang91/promise-async", },
+--		config = function() require('ufo').setup() end
+--	},
 	{
 		"windwp/nvim-autopairs",
 		config = function()
