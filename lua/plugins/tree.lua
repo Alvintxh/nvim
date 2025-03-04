@@ -11,16 +11,24 @@ return {
         	config = function()
             		require("nvim-tree").setup({
 				view = {
-    					width = 50,
+    					width = 40,
   				},
 			})
-        	end,
-	},
+			-- open the tree
+  			require("nvim-tree.api").tree.open()
+
+			vim.api.nvim_create_autocmd({"QuitPre"}, {
+    				callback = function() vim.cmd("NvimTreeClose") end,
+			})
+		end
+
+
+        },
 
 	{
 		"airblade/vim-rooter",
 		init = function()
-			vim.g.rooter_patterns = { '__vim_project_root', '.git/' ,'=SDU_Paper','sdu_papers.md' }
+			vim.g.rooter_patterns = { '__vim_project_root', '.git/' }
 			vim.g.rooter_silent_chdir = true
 			-- set an autocmd
 			vim.api.nvim_create_autocmd("VimEnter", {

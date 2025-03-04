@@ -7,3 +7,4 @@ vim.wo.signcolumn = "yes"
 vim.o.whichwrap = "<,>,[,]"
 vim.o.cmdheight = 1
 vim.g.deus_termcolors=256
+
