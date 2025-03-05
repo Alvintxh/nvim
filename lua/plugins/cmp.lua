@@ -22,7 +22,7 @@ return {
         lspconfig.pyright.setup { capabilities = capabilities }  -- Python
         lspconfig.texlab.setup { capabilities = capabilities } -- LaTeX
  	lspconfig.lua_ls.setup{capabilities = capabilities} --lua
-	-- 添加更多语言服务器...
+	--lspconfig.clangd.setup{capabilities = capabilities} --c/c++
     end
   },
 
