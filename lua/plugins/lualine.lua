@@ -1,3 +1,11 @@
+local colors = {
+	bg       = '#2c323b',
+	fg       = '#eaeaea',
+ 	a	 = '#edbf69',
+	b	 = '#98c379'
+
+}
+
 return{
     	'nvim-lualine/lualine.nvim',
     	dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -6,7 +14,18 @@ return{
 		require('lualine').setup {
 			options = {
 				icons_enabled = true,
-				theme = 'auto',
+				theme = {
+					normal = {
+						a = { bg = colors.bg, fg = colors.a, gui = 'bold' },
+						b = { bg = colors.bg, fg = colors.b },
+						c = { bg = colors.bg, fg = colors.fg }
+					},
+					inactive = {
+						a = { bg = colors.bg, fg = colors.fg, gui = 'bold' },
+						b = { bg = colors.bg, fg = colors.fg },
+						c = { bg = colors.bg, fg = colors.fg }
+					}
+				},
 				component_separators = { left = '', right = '' },
 				section_separators = { left = '', right = '' },
 				disabled_filetypes = {
@@ -33,8 +52,8 @@ return{
 			inactive_sections = {
 				lualine_a = {},
 				lualine_b = {},
-				lualine_c = { 'filename' },
-				lualine_x = { 'location' },
+				lualine_c = {'filename'},
+				lualine_x = {'location'},
 				lualine_y = {},
 				lualine_z = {}
 			},
