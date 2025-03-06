@@ -22,6 +22,7 @@ return {
         lspconfig.pyright.setup { capabilities = capabilities }  -- Python
         lspconfig.texlab.setup { capabilities = capabilities } -- LaTeX
  	lspconfig.lua_ls.setup{capabilities = capabilities} --lua
+	lspconfig.markdown_oxide.setup{capabilities = capabilities} --md
 	--lspconfig.clangd.setup{capabilities = capabilities} --c/c++
     end
   },
