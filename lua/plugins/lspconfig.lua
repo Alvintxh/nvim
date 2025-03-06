@@ -6,7 +6,7 @@ return {
 		require("lsp.latex")
 		require("lsp.python")
 		require("lsp.md")
-		--require("lsp.cpp")
+		require("lsp.cpp")
 	end,
 }
 
