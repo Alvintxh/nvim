@@ -3,7 +3,7 @@ return {
 	dependencies = {
 		"roxma/nvim-yarp",
 		"roxma/vim-hug-neovim-rpc",
-		"lambdalisue/nerdfont.vim",
+		"kyazdani42/nvim-web-devicons",
 	},
 	config = function()
 		local wilder = require('wilder')
