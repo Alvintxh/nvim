@@ -15,7 +15,7 @@ return {
   				},
 			})
 			-- open the tree
-  			require("nvim-tree.api").tree.open()
+  			--require("nvim-tree.api").tree.open()
 
 			vim.api.nvim_create_autocmd({"QuitPre"}, {
     				callback = function() vim.cmd("NvimTreeClose") end,

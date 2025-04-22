@@ -9,6 +9,9 @@ return{
     	},
 	opts = {
         -- configuration goes heredoc
+		 ---@type string
+    		arg = "leetcode.nvim",
+
 		cn = { -- leetcode.cn
     			enabled = true, ---@type boolean
     			translator = true, ---@type boolean
@@ -16,7 +19,6 @@ return{
 		},
 	},
 }
-
 
 
 

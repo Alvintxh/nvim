@@ -1,7 +1,7 @@
 return{
   	"lervag/vimtex",
 	--ft = { 'tex', 'latex' }, -- 仅在编辑 TeX 文件时加载
-  	--lazy = false,     -- we don't want to lazy load VimTeX
+  	lazy = false,     -- we don't want to lazy load VimTeX
   	-- tag = "v2.15", -- uncomment to pin to a specific release
 
   	init = function()
