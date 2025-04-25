@@ -1,5 +1,5 @@
 return {
-	"gelguy/wilder.nvim",
+	--[[	"gelguy/wilder.nvim",
 	dependencies = {
 		"roxma/nvim-yarp",
 		"roxma/vim-hug-neovim-rpc",
@@ -47,5 +47,5 @@ return {
 				substitute = wildmenu_renderer,
 			})
 		)
-	end,
+	end,]]
 }

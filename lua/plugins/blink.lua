@@ -1,48 +1,45 @@
 return {
-	--[[	"saghen/blink.cmp",
+	"saghen/blink.cmp",
 	event = { "BufReadPost", "BufNewFile" },
 	version = "1.*",
 	dependencies = {
 		"xzbdmw/colorful-menu.nvim",
-		"hrsh7th/nvim-cmp", -- Ensure nvim-cmp is available
-		"L3MON4D3/LuaSnip", -- Snippet support
+		config = function()
+			require("colorful-menu").setup({
+				ls = {
+					lua_ls = { arguments_hl = "@comment" },
+					clangd = {
+						extra_info_hl = "@comment",
+					},
+					pyright = {
+						extra_info_hl = "@comment",
+					},
+					fallback = true,
+				},
+				fallback_highlight = "@variable",
+				max_width = 60,
+			})
+		end,
 	},
 
 	config = function()
-		--	local cmp = require("cmp")
-		--	local blink_cmp = require("blink.cmp")
-
-		-- Configure colorful-menu
-		require("colorful-menu").setup({
-			ls = {
-				lua_ls = { arguments_hl = "@comment" },
-				clangd = { extra_info_hl = "@comment" },
-				basedpyright = { extra_info_hl = "@comment" },
-				fallback = true,
-			},
-			fallback_highlight = "@variable",
-			max_width = 60,
-		})
-
-		-- Setup blink.cmp with enhanced keymaps and sources
 		require("blink.cmp").setup({
 			sources = {
-				{ name = "nvim_lsp" }, -- LSP completions
-				{ name = "luasnip" }, -- Snippet completions
-				{ name = "buffer" }, -- Buffer words
+				-- default = { 'lsp', 'path', 'snippets', 'buffer' },
+				providers = {
+					snippets = { score_offset = 1000 },
+				},
 			},
-			snippet = {
-				expand = function(args)
-					require("luasnip").lsp_expand(args.body)
-				end,
+			signature = {
+				window = { border = "single" },
 			},
-			mapping = require("cmp").mapping.preset.insert({
-				["<CR>"] = require("cmp").mapping.confirm({ select = true }), -- Confirm selection with Enter
-				["<C-u>"] = require("cmp").mapping.scroll_docs(-4), -- Scroll up docs
-				["<C-d>"] = require("cmp").mapping.scroll_docs(4), -- Scroll down docs
-				["<C-Space>"] = require("cmp").mapping.complete(), -- Trigger completion
-				["<C-e>"] = require("cmp").mapping.abort(), -- Abort completion
-			}),
+			cmdline = {
+				completion = {
+					menu = {
+						auto_show = true,
+					},
+				},
+			},
 			completion = {
 				menu = {
 					border = "single",
@@ -66,6 +63,14 @@ return {
 					auto_show_delay_ms = 500,
 				},
 			},
+			keymap = {
+				-- Confirm selection with Enter
+				["<CR>"] = { "accept", "fallback" },
+
+				-- Scroll documentation
+				["<C-u>"] = { "scroll_documentation_up", "fallback" },
+				["<C-d>"] = { "scroll_documentation_down", "fallback" },
+			},
 		})
-	end,]]
+	end,
 }

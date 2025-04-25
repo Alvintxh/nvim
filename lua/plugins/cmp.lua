@@ -29,7 +29,7 @@ return {
 	},
 
 	-- 自动补全核心配置
-	{
+	--[[
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
 		config = function()
@@ -72,16 +72,16 @@ return {
 			--	}
 			--  })
 		end,
-	},
+	},]]
 
 	-- 代码片段引擎
-	{ "hrsh7th/vim-vsnip", event = "InsertEnter" },
-	{ "hrsh7th/cmp-vsnip", dependencies = "vim-vsnip" },
+	--	{ "hrsh7th/vim-vsnip", event = "InsertEnter" },
+	--	{ "hrsh7th/cmp-vsnip", dependencies = "vim-vsnip" },
 
 	-- 其他可选插件（保持注释状态）
 
 	-- LuaSnip 示例配置
-	{
+	--[[	{
 		"L3MON4D3/LuaSnip",
 		config = function()
 			require("luasnip.loaders.from_vscode").lazy_load()
@@ -90,5 +90,5 @@ return {
 	{
 		"saadparwaiz1/cmp_luasnip",
 		dependencies = "L3MON4D3/LuaSnip",
-	},
+	},]]
 }
