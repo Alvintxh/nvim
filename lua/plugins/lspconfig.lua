@@ -7,8 +7,6 @@ return {
 		require("lsp.python")
 		require("lsp.md")
 		require("lsp.cpp")
+		require("lsp.json")
 	end,
 }
-
-
-

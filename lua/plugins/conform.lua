@@ -23,6 +23,7 @@ return {
 			desc = "Format buffer",
 		},
 	},
+
 	config = function()
 		require("conform").setup({
 			notify_on_error = true,
@@ -39,6 +40,7 @@ return {
 				lua = { "stylua" },
 				tex = { "tex-fmt" },
 				python = { "yapf", "isort" },
+				json = { "prettierd" },
 			},
 			formatters = {
 				cbfmt = {
