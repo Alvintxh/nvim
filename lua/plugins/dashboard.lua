@@ -1,23 +1,26 @@
-return{
-  'nvimdev/dashboard-nvim',
-  event = 'VimEnter',
-  config = function()
-    require('dashboard').setup {
-      -- config
-	config = {
- 		 shortcut = {
-    			-- action can be a function type
-    			{ desc = string, group = 'highlight group', key = 'shortcut key', action = 'action when you press key' },
-  			},
- 		 packages = { enable = true }, -- show how many plugins neovim loaded
-  			-- limit how many projects list, action when you press key or enter it will run this action.
-  			-- action can be a function type, e.g.
-  			-- action = func(path) vim.cmd('Telescope find_files cwd=' .. path) end
-  		project = { enable = true, limit = 8, icon = 'your icon', label = '', action = 'Telescope find_files cwd=' },
-  		mru = { enable = true, limit = 10, icon = 'your icon', label = '', cwd_only = false },
-  		footer = {}, -- footer
-	}
-    }
-  end,
-  dependencies = { {'nvim-tree/nvim-web-devicons'}}
+return {
+	"nvimdev/dashboard-nvim",
+	event = "VimEnter",
+	config = function()
+		require("dashboard").setup({
+			theme = "doom",
+			config = {
+				center = {
+					{
+						icon = "",
+						icon_hl = "group",
+						desc = "description",
+						desc_hl = "group",
+						key = "shortcut key in dashboard buffer not keymap !!",
+						key_hl = "group",
+						key_format = " [%s]", -- `%s` will be substituted with value of `key`
+						action = "",
+					},
+				},
+				footer = {},
+				vertical_center = false, -- Center the Dashboard on the vertical (from top to bottom)
+			},
+		})
+	end,
+	dependencies = { { "nvim-tree/nvim-web-devicons" } },
 }
