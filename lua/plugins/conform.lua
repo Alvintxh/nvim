@@ -39,8 +39,9 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				tex = { "tex-fmt" },
-				python = { "yapf", "isort" },
-				json = { "prettierd" },
+				python = { "pyproject-fmt" },
+				json = { "fixjson" },
+				bash = { "beautysh" },
 			},
 			formatters = {
 				cbfmt = {
