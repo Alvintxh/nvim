@@ -16,7 +16,7 @@ return {
 			vim.opt.smartindent = false
 			require("nvim-treesitter.configs").setup({
 				auto_install = true,
-				sync_install = false,
+				sync_install = true,
 				ensure_installed = {
 					"markdown",
 					"html",
