@@ -27,7 +27,6 @@ return {
 					"bash",
 					"lua",
 					"vim",
-					"dockerfile",
 					"yaml",
 					"latex",
 					"python",
