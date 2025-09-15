@@ -33,6 +33,7 @@ end
 
 return {
 	"CRAG666/code_runner.nvim",
+	event = "VeryLazy",
 	dependencies = {},
 	config = function()
 		require("code_runner").setup({
@@ -45,12 +46,12 @@ return {
 			-- },
 			filetype = {
 				python = "python3 -u $fileName",
-				--rust = {
-				--"cargo run --release",
-				-- "cd $dir &&",
-				-- "rustc $fileName &&",
-				-- "$dir/$fileNameWithoutExt",
-				--},
+				rust = {
+					"cargo run",
+					--	"cd $dir &&",
+					--	"rustc $fileName &&",
+					--	"$dir/$fileNameWithoutExt",
+				},
 				-- typescript = "deno run",
 				-- java = {
 				-- 	"cd $dir &&",

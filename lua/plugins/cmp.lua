@@ -25,6 +25,7 @@ return {
 			lspconfig.markdown_oxide.setup({ capabilities = capabilities }) --md
 			lspconfig.clangd.setup({ capabilities = capabilities }) --c/c++
 			lspconfig.jsonls.setup({ capabilities = capabilities }) --json
+			lspconfig.rust_analyzer.setup({ capabilities = capabilities }) --rust
 		end,
 	},
 }

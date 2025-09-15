@@ -1,8 +1,9 @@
 local colors = {
-	bg = "#2c323b",
+	--bg = "#2c323b",
+	bg = "#24273a",
 	fg = "#eaeaea",
-	a = "#edbf69",
-	b = "#98c379",
+	a = "#8aadf4",
+	b = "#c6a0f6",
 }
 
 return {

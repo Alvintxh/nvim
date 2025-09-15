@@ -6,7 +6,7 @@ return {
 
 	init = function()
 		-- VimTeX configuration goes here, e.g.
-		vim.g.vimtex_view_method = "sioyek"
+		vim.g.vimtex_view_method = "mupdf"
 		vim.g.vimtex_compiler_method = "latexmk"
 		vim.g.vimtex_parser_bib_backend = "bibtex"
 		vim.g.vimtex_complete_cite = "simple"
@@ -42,6 +42,7 @@ return {
 			"Token not allowed in a PDF string",
 			"LaTeX Warning: Float too large for page",
 			"contains only floats",
+			"Package inputenc Warning: inputenc package ignored with utf8 based engines.",
 		}
 	end,
 }

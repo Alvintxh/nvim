@@ -8,5 +8,6 @@ return {
 		require("lsp.md")
 		require("lsp.cpp")
 		require("lsp.json")
+		require("lsp.rust")
 	end,
 }

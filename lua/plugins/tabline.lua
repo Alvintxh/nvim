@@ -1,6 +1,6 @@
 return {
-	'akinsho/bufferline.nvim',
-	dependencies = 'nvim-tree/nvim-web-devicons',
+	"akinsho/bufferline.nvim",
+	dependencies = "nvim-tree/nvim-web-devicons",
 	opts = {
 		options = {
 			mode = "buffers",
@@ -11,18 +11,18 @@ return {
 				return " " .. icon .. count
 			end,
 			indicator = {
-				icon = '▎', -- this should be omitted if indicator style is not 'icon'
+				icon = "▎", -- this should be omitted if indicator style is not 'icon'
 				-- style = 'icon' | 'underline' | 'none',
 				style = "icon",
 			},
 			offsets = {
 				{
-            				filetype = "NvimTree",
-            				text = "File Explorer",
-            				highlight = "Directory",
-            				text_align = "center"
-				}
-        		},
+					filetype = "NvimTree",
+					text = "File Explorer",
+					highlight = "Directory",
+					text_align = "center",
+				},
+			},
 
 			show_buffer_close_icons = true,
 			show_close_icon = true,
@@ -30,7 +30,22 @@ return {
 			show_duplicate_prefix = true,
 			tab_size = 16,
 			padding = 0,
-			separator_style = "thick",
-		}
-	}
+			separator_style = "thin",
+		},
+		highlights = {
+			fill = {
+				bg = "#24273a", -- 整个背景色
+			},
+			background = {
+				bg = "#24273a", -- buffer 未选中背景色
+			},
+			buffer_selected = {
+				bg = "#24273a", -- buffer 选中背景色
+				bold = true,
+			},
+			tab_selected = {
+				bg = "#24273a",
+			},
+		},
+	},
 }

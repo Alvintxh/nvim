@@ -39,16 +39,18 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				tex = { "tex-fmt" },
-				python = { "pyproject-fmt" },
+				python = { "yapf", "isort" },
 				json = { "fixjson" },
-				bash = { "beautysh" },
+				sh = { "shfmt" },
+				rust = { "rustfmt" },
+				markdown = { "prettierd", "cbfmt" },
 			},
 			formatters = {
 				cbfmt = {
 					command = "cbfmt",
 					args = { "-w", "--config", vim.fn.expand("~") .. "/.config/cbfmt.toml", "$FILENAME" },
 				},
-				taplo = { command = "taplo", args = { "fmt", "--option", "indent_tables=false", "-" } },
+				-- taplo = { command = "taplo", args = { "fmt", "--option", "indent_tables=false", "-" } },
 			},
 		})
 
