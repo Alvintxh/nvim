@@ -28,7 +28,7 @@ return {
 					"lua",
 					"vim",
 					"yaml",
-					"latex",
+					-- "latex",
 					"python",
 				},
 				highlight = {

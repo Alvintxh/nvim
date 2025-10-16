@@ -1,8 +1,8 @@
-return{
-	require'lspconfig'.pyright.setup{
+return {
+	vim.lsp.config("pyright", {
 		cmd = { "pyright-langserver", "--stdio" },
 		filetypes = { "python" },
-		root_dir = require'lspconfig'.util.root_pattern(".git", "setup.py", "setup.cfg", "pyproject.toml", "requirements.txt"),
+		root_dir = vim.fs.root(0, { ".git", "setup.py", "setup.cfg", "pyproject.toml", "requirements.txt" }),
 		settings = {
 			python = {
 				analysis = {
@@ -16,5 +16,5 @@ return{
 				},
 			},
 		},
-	}
+	})
 }

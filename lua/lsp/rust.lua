@@ -1,6 +1,7 @@
 return {
-	require("lspconfig").rust_analyzer.setup {
+	vim.lsp.config("rust_analyzer", {
 		on_attach = function(client, bufnr)
+			-- 启用 inlay hints
 			vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 		end,
 		settings = {
@@ -17,9 +18,9 @@ return {
 					},
 				},
 				procMacro = {
-					enable = true
+					enable = true,
 				},
-			}
-		}
-	}
+			},
+		},
+	}),
 }
