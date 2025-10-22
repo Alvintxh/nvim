@@ -10,8 +10,6 @@ return {
 		vim.g.vimtex_compiler_method = "latexmk"
 		vim.g.vimtex_parser_bib_backend = "bibtex"
 		vim.g.vimtex_complete_cite = "simple"
-		--vim.g.vimtex_complete_bib = 'simple'
-		--vim.g.vimtex_complete_bib.match_str_fmt = 'match_str_fmt'
 		vim.g.vimtex_compiler_latexmk_engines = { _ = "-xelatex" }
 		vim.g.vimtex_compiler_latexmk = {
 			executable = "latexmk",
