@@ -39,11 +39,11 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				tex = { "tex-fmt" },
-				python = { "yapf", "isort" },
+				python = { "yapf" },
 				json = { "fixjson" },
 				sh = { "shfmt" },
 				rust = { "rustfmt" },
-				markdown = { "prettierd", "cbfmt" },
+				markdown = { "cbfmt" },
 			},
 			formatters = {
 				cbfmt = {
