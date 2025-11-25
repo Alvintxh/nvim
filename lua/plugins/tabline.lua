@@ -34,17 +34,17 @@ return {
 		},
 		highlights = {
 			fill = {
-				bg = "#24273a", -- 整个背景色
+				bg = "#1e1e2e", -- 整个背景色
 			},
 			background = {
-				bg = "#24273a", -- buffer 未选中背景色
+				bg = "#1e1e2e", -- buffer 未选中背景色
 			},
 			buffer_selected = {
-				bg = "#24273a", -- buffer 选中背景色
+				bg = "#1e1e2e", -- buffer 选中背景色
 				bold = true,
 			},
 			tab_selected = {
-				bg = "#24273a",
+				bg = "#1e1e2e",
 			},
 		},
 	},
