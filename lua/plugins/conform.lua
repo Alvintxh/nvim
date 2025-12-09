@@ -40,10 +40,10 @@ return {
 				lua = { "stylua" },
 				tex = { "tex-fmt" },
 				python = { "yapf" },
-				json = { "fixjson" },
+				json = { "prettierd" },
 				sh = { "shfmt" },
 				rust = { "rustfmt" },
-				markdown = { "cbfmt" },
+				markdown = { "prettierd" },
 			},
 			formatters = {
 				cbfmt = {

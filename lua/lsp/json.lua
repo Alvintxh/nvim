@@ -1,9 +1,21 @@
-return {
-  vim.lsp.config("jsonls", {
-    on_attach = function(client, bufnr)
-      -- 这里可以写 jsonls 特定的按键绑定或功能
-      -- 暂时保留为空
-    end,
-  }),
-}
-
+vim.lsp.config("jsonls", {
+	cmd = { "vscode-json-language-server", "--stdio" },
+	filetypes = { "json", "jsonc" },
+	root_markers = { "package.json", ".git" },
+	init_options = {
+		provideFormatter = true,
+	},
+	settings = {
+		json = {
+			schemas = (function()
+				local ok, schemastore = pcall(require, "schemastore")
+				if ok then
+					return schemastore.json.schemas()
+				else
+					return {}
+				end
+			end)(),
+			validate = { enable = true },
+		},
+	},
+})
