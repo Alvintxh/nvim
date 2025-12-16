@@ -1,7 +1,9 @@
 ### My neovim configuration
 
 - plugin manager: Lazy.nvim
-- theme: [ajmwagar/vim-deus](http://www.github.com/ajmwagar/vim-deus)
+- theme that I like: catppuccin-mocha
+
+before use this config: install _npm_ and _tree-sitter-cli_
 
 Here is a screenshot of my neovim:
-![screenshot](./img/My_nvim.png)
+![screenshot](./img/image.png)
