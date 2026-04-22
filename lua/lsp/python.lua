@@ -9,6 +9,7 @@ return {
 					autoSearchPaths = true,
 					useLibraryCodeForTypes = true,
 					autoImportCompletions = true,
+					typeCheckingMode = "basic",
 					diagnostics = {
 						enable = true,
 						enableSemanticAnalysis = true,
@@ -16,5 +17,5 @@ return {
 				},
 			},
 		},
-	})
+	}),
 }

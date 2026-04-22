@@ -28,12 +28,11 @@ return {
 					"lua",
 					"vim",
 					"yaml",
-					-- "latex",
+					"latex",
 					"python",
 				},
 				highlight = {
 					enable = true,
-					disable = {}, -- list of language that will be disabled
 				},
 				indent = {
 					enable = true,

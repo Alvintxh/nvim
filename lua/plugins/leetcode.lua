@@ -11,7 +11,7 @@ return {
 		-- configuration goes heredoc
 		---@type string
 		arg = "leetcode.nvim",
-
+		lang = "python3",
 		cn = { -- leetcode.cn
 			enabled = true, ---@type boolean
 			translator = true, ---@type boolean

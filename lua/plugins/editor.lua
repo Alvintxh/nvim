@@ -27,29 +27,44 @@ return {
 	{
 		"NvChad/nvim-colorizer.lua",
 		opts = {
-			filetypes = { "*" },
-			user_default_options = {
-				RGB = true, -- #RGB hex codes
-				RRGGBB = true, -- #RRGGBB hex codes
-				names = true, -- "Name" codes like Blue or blue
-				RRGGBBAA = false, -- #RRGGBBAA hex codes
-				AARRGGBB = true, -- 0xAARRGGBB hex codes
-				rgb_fn = false, -- CSS rgb() and rgba() functions
-				hsl_fn = false, -- CSS hsl() and hsla() functions
-				css = false, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-				css_fn = false, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-				-- Available modes for `mode`: foreground, background,  virtualtext
-				mode = "virtualtext", -- Set the display mode.
-				-- Available methods are false / true / "normal" / "lsp" / "both"
-				-- True is same as normal
-				tailwind = true,
-				sass = { enable = false },
-				virtualtext = "■",
+			-- 顶级配置项，用于隐藏警告
+			suppress_deprecation = true,
+
+			-- 新的结构化配置格式
+			options = {
+				-- 解析器配置
+				parsers = {
+					css = {
+						RGB = true,
+						RRGGBB = true,
+						names = true,
+						RRGGBBAA = false,
+						AARRGGBB = true,
+						rgb_fn = false,
+						hsl_fn = false,
+						css = false,
+						css_fn = false,
+					},
+					tailwind = { enable = true },
+					sass = { enable = false },
+				},
+				-- 显示配置
+				display = {
+					mode = "virtualtext",
+					virtualtext = {
+						text = "■", -- 显示的字符
+						position = "inline", -- 显示位置，可选 "inline", "eol", "overlay"
+					},
+				},
 			},
-			-- all the sub-options of filetypes apply to buftypes
+
+			-- 应用到所有文件类型
+			filetypes = { "*" },
+			-- 应用到所有缓冲区类型
 			buftypes = {},
 		},
 	},
+
 	{ "theniceboy/antovim", lazy = false },
 	{ "gcmt/wildfire.vim", lazy = false },
 	{

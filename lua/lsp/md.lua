@@ -28,7 +28,6 @@ return {
 			},
 		},
 		on_attach = function(client, bufnr)
-			-- 自定义按键映射
 			local opts = { noremap = true, silent = true }
 			local keymap = vim.api.nvim_buf_set_keymap
 			keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
